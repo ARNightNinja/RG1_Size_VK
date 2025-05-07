@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
-	<!-- Yandex.Metrika counter -->
-	<script type="text/javascript" >
-	   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-	   m[i].l=1*new Date();
-	   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-	   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-	   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+	
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript" >
+		   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+		   m[i].l=1*new Date();
+		   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+		   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+		   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-	   ym(100013076, "init", {
-			clickmap:true,
-			trackLinks:true,
-			accurateTrackBounce:true
-	   });
-	</script>
-	<noscript><div><img src="https://mc.yandex.ru/watch/100013076" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-	<!-- /Yandex.Metrika counter -->
+		   ym(100013076, "init", {
+				clickmap:true,
+				trackLinks:true,
+				accurateTrackBounce:true
+		   });
+		</script>
+		<noscript><div><img src="https://mc.yandex.ru/watch/100013076" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+		<!-- /Yandex.Metrika counter -->
+	
+	
+	
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>EasyRobby_WebGL</title>
+        <title>Obby</title>
         <style>
             html, body {
                 width: 100%;
@@ -35,12 +39,6 @@
                 top: 0px;
                 left: 0px;
             }
-            #banner-container {
-                position: absolute;
-                bottom: 0px;
-                width: 100%;
-                height: 90px;
-            }
             #loading-overlay {
                 font-size: 20px;
                 z-index: 1;
@@ -50,15 +48,15 @@
                 align-items: center;
             }
             #icon {
-                max-width: 100px;
+                max-width: 120px;
                 border-radius: 10px;
                 margin-bottom: 20px;
             }
             #progress-bar {
                 border-radius: 5px;
                 width: 90%;
-                max-width: 250px;
-                height: 20px;
+                max-width: 300px;
+                height: 22px;
                 background: #181818;
                 padding: 5px;
             }
@@ -72,7 +70,6 @@
     </head>
     <body>
         <canvas id="canvas" class="fullscreen"></canvas>
-        <div id="banner-container" style="display: none"></div>
         <div id="loading-overlay" class="fullscreen">
             <img id="icon" src="./icon.png" />
             <div id="progress-bar"><div id="progress-bar-fill"></div></div>
@@ -89,7 +86,6 @@
             let canvas = document.getElementById('canvas')
             let loadingOverlay = document.getElementById('loading-overlay')
             let progressBarFill = document.getElementById('progress-bar-fill')
-            let bannerContainer = document.getElementById('banner-container')
 
             const STORAGE_DATA_SEPARATOR = '{bridge_data_separator}'
             const STORAGE_KEYS_SEPARATOR = '{bridge_keys_separator}'
@@ -155,24 +151,15 @@
                 canvas.focus()
             })
 
-
-            let bridgeOptions = {
-                platforms: {
-                }
-            }
-
+            
             // initialization
             bridge
-                .initialize(bridgeOptions)
+                .initialize()
                 .then(() => {
                     bridge.advertisement.on('banner_state_changed', state => sendMessageToUnity('OnBannerStateChanged', state))
                     bridge.advertisement.on('interstitial_state_changed', state => sendMessageToUnity('OnInterstitialStateChanged', state))
                     bridge.advertisement.on('rewarded_state_changed', state => sendMessageToUnity('OnRewardedStateChanged', state))
                     bridge.game.on('visibility_state_changed', state => sendMessageToUnity('OnVisibilityStateChanged', state))
-
-                    if (bridge.platform.id === bridge.PLATFORM_ID.GAME_DISTRIBUTION) {
-                        bridge.advertisement.showInterstitial()
-                    }
 
                     let unityLoader = document.createElement('script')
                     unityLoader.src = 'Build/d9d605cb1c18b4ed9fb179406f02ceab.loader.js'
@@ -180,12 +167,12 @@
                         createUnityInstance(
                             canvas,
                             {
-                                dataUrl: 'Build/8ac540d2f7ad9a00c2fa01d8f6c2961b.data.unityweb',
-                                frameworkUrl: 'Build/acf48425ea157bd7a24b4a91875fd1ab.framework.js.unityweb',
-                                codeUrl: 'Build/5d08c4ec7589dc540dce59a762dcc4fa.wasm.unityweb',
+                                dataUrl: 'Build/c3c223b137b0b4e5457c2f5ace06771e.data.unityweb',
+                                frameworkUrl: 'Build/611954cc7ed043f656238d29a837ec62.framework.js.unityweb',
+                                codeUrl: 'Build/d373ee04c278878c3043fb8cf0526ef0.wasm.unityweb',
                                 streamingAssetsUrl: 'StreamingAssets',
-                                companyName: 'DefaultCompany',
-                                productName: 'EasyRobby_WebGL',
+                                companyName: 'Kreiz.Obby.Parkour',
+                                productName: 'Obby',
                                 productVersion: '0.1',
                                 // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
                                 // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
@@ -232,6 +219,14 @@
                 }
             }
 
+            window.getIsPlatformGetAllGamesSupported = function() {
+                return bridge.platform.isGetAllGamesSupported.toString()
+            }
+
+            window.getIsPlatformGetGameByIdSupported = function() {
+                return bridge.platform.isGetGameByIdSupported.toString()
+            }
+
             window.sendMessageToPlatform = function(message) {
                 bridge.platform.sendMessage(message)
             }
@@ -246,6 +241,31 @@
                     })
             }
 
+            window.getAllGames = function() {
+                bridge.platform.getAllGames()
+                    .then(result => {
+                        sendMessageToUnity('OnGetAllGamesCompletedSuccess', JSON.stringify(result))
+                    })
+                    .catch(error => {
+                        sendMessageToUnity('OnGetAllGamesCompletedFailed')
+                    })
+            }
+
+            window.getGameById = function(options) {
+                if (options) {
+                    options = JSON.parse(options)
+                } else {
+                    options = { }
+                }
+
+                bridge.platform.getGameById(options)
+                    .then(result => {
+                        sendMessageToUnity('OnGetGameByIdCompletedSuccess', JSON.stringify(result))
+                    })
+                    .catch(error => {
+                        sendMessageToUnity('OnGetGameByIdCompletedFailed')
+                    })
+            }
 
             // device
             window.getDeviceType = function() {
@@ -413,26 +433,10 @@
                     options = { }
                 }
 
-                if (bridge.platform.id === bridge.PLATFORM_ID.CRAZY_GAMES || bridge.platform.id === bridge.PLATFORM_ID.GAME_DISTRIBUTION) {
-                    bannerContainer.style.display = 'block'
-                }
-
-                options['crazy_games'] = {
-                    containerId: 'banner-container'
-                }
-
-                options['game_distribution'] = {
-                    containerId: 'banner-container'
-                }
-
                 bridge.advertisement.showBanner(options)
             }
 
             window.hideBanner = function() {
-                if (bridge.platform.id === bridge.PLATFORM_ID.CRAZY_GAMES || bridge.platform.id === bridge.PLATFORM_ID.GAME_DISTRIBUTION) {
-                    bannerContainer.style.display = 'none'
-                }
-
                 bridge.advertisement.hideBanner()
             }
 
@@ -668,24 +672,8 @@
                 return bridge.payments.isSupported.toString()
             }
 
-            window.getIsCatalogSupported = function() {
-                return bridge.payments.isGetCatalogSupported.toString()
-            }
-
-            window.getIsPurchaseListSupported = function() {
-                return bridge.payments.isGetPurchasesSupported.toString()
-            }
-
-            window.getIsPurchaseConsumingSupported = function() {
-                return bridge.payments.isConsumePurchaseSupported.toString()
-            }
-
-            window.paymentsPurchase = function(options) {
-                if (options) {
-                    options = JSON.parse(options)
-                }
-                
-                bridge.payments.purchase(options)
+            window.paymentsPurchase = function(id) {
+                bridge.payments.purchase(id)
                     .then(data => {
                         if (data) {
                             if (typeof data !== 'string') {
@@ -702,12 +690,8 @@
                     })
             }
 
-            window.paymentsConsumePurchase = function(options) {
-                if (options) {
-                    options = JSON.parse(options)
-                }
-                
-                bridge.payments.consumePurchase(options)
+            window.paymentsConsumePurchase = function(id) {
+                bridge.payments.consumePurchase(id)
                     .then(() => {
                         sendMessageToUnity('OnPaymentsConsumePurchaseCompleted', 'true')
                     })

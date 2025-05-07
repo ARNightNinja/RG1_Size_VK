@@ -1,0 +1,68 @@
+{
+    "platforms": {
+        "game_distribution": {
+            "gameId": ""
+        },
+        "telegram": {
+            "adsgramBlockId": ""
+        },
+        "y8": {
+            "gameId": "",
+            "adsenseId": "",
+            "channelId": ""
+        },
+        "lagged": {
+            "devId": "",
+            "publisherId": ""
+        },
+        "facebook": {
+            "bannerPlacementId": "",
+            "interstitialPlacements": [],
+            "rewardedPlacements": []
+        }
+    },
+	"payments": [
+		{
+			"commonId": "coins_1",
+			"yandex": {
+				"id": "coins_1"
+			}
+		},
+		{
+			"commonId": "coins_2",
+			"yandex": {
+				"id": "coins_2"
+			}
+		},
+		{
+			"commonId": "diamonds_1",
+			"yandex": {
+				"id": "diamonds_1"
+			}
+		},
+		{
+			"commonId": "diamonds_2",
+			"yandex": {
+				"id": "diamonds_2"
+			}
+		},
+		{
+			"commonId": "offer_1",
+			"yandex": {
+				"id": "offer_1"
+			}
+		},
+		{
+			"commonId": "offer_2",
+			"yandex": {
+				"id": "offer_2"
+			}
+		},
+		{
+			"commonId": "offer_3",
+			"yandex": {
+				"id": "offer_3"
+			}
+		}
+    ]
+}
