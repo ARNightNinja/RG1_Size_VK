@@ -1,122 +1,211 @@
 {
-    "platforms": {
-        "game_distribution": {
-            "gameId": ""
-        },
-        "telegram": {
-            "adsgramBlockId": ""
-        },
-        "y8": {
-            "gameId": "",
-            "adsenseId": "",
-            "channelId": ""
-        },
-        "lagged": {
-            "devId": "",
-            "publisherId": ""
-        },
-        "facebook": {
-            "bannerPlacementId": "",
-            "interstitialPlacements": [],
-            "rewardedPlacements": []
-        }
+  "$schema": "https://bridge.playgama.com/v1.27.0/schema.json",
+  "advertisement": {
+    "interstitial": {
+      "preloadOnStart": true
     },
-	"payments": [
-		{
-			"commonId": "coins_1",
-			"yandex": {
-				"id": "coins_1"
-			}
-		},
-		{
-			"commonId": "coins_2",
-			"yandex": {
-				"id": "coins_2"
-			}
-		},
-		{
-			"commonId": "diamonds_1",
-			"yandex": {
-				"id": "diamonds_1"
-			}
-		},
-		{
-			"commonId": "diamonds_2",
-			"yandex": {
-				"id": "diamonds_2"
-			}
-		},
-		{
-			"commonId": "offer_1",
-			"yandex": {
-				"id": "offer_1"
-			}
-		},
-		{
-			"commonId": "offer_2",
-			"yandex": {
-				"id": "offer_2"
-			}
-		},
-		{
-			"commonId": "offer_3",
-			"yandex": {
-				"id": "offer_3"
-			}
-		},
-		{
-			"commonId": "key_1",
-			"yandex": {
-				"id": "key_1"
-			}
-		},
-		{
-			"commonId": "key_2",
-			"yandex": {
-				"id": "key_2"
-			}
-		},
-		{
-			"commonId": "key_3",
-			"yandex": {
-				"id": "key_3"
-			}
-		},
-		{
-			"commonId": "key_4",
-			"yandex": {
-				"id": "key_4"
-			}
-		},
-		{
-			"commonId": "screwdrive_1",
-			"yandex": {
-				"id": "screwdrive_1"
-			}
-		},
-		{
-			"commonId": "scissors_1",
-			"yandex": {
-				"id": "scissors_1"
-			}
-		},
-		{
-			"commonId": "scissors_2",
-			"yandex": {
-				"id": "scissors_2"
-			}
-		},
-		{
-			"commonId": "plank_1",
-			"yandex": {
-				"id": "plank_1"
-			}
-		},
-		{
-			"commonId": "pickaxe1",
-			"yandex": {
-				"id": "pickaxe1"
-			}
-		}
-    ]
+    "rewarded": {
+      "preloadOnStart": true
+    },
+    "useBuiltInErrorPopup": true,
+    "backfillId": ""
+  },
+  "payments": [
+    {
+      "id": "offer_1",
+      "yandex": {
+        "id": "offer_1"
+      },
+      "msn": {
+        "id": "offer_1"
+      },
+      "playgama": {
+        "amount": 10
+      }
+    },
+    {
+      "id": "key_1",
+      "yandex": {
+        "id": "key_1"
+      },
+      "msn": {
+        "id": "key_1"
+      },
+      "playgama": {
+        "amount": 10
+      }
+    },
+    {
+      "id": "screwdrive_1",
+      "yandex": {
+        "id": "screwdrive_1"
+      },
+      "msn": {
+        "id": "screwdrive_1"
+      },
+      "playgama": {
+        "amount": 10
+      }
+    },
+    {
+      "id": "scissors_1",
+      "yandex": {
+        "id": "scissors_1"
+      },
+      "msn": {
+        "id": "scissors_1"
+      },
+      "playgama": {
+        "amount": 10
+      }
+    },
+    {
+      "id": "plank_1",
+      "yandex": {
+        "id": "plank_1"
+      },
+      "msn": {
+        "id": "plank_1"
+      },
+      "playgama": {
+        "amount": 10
+      }
+    },
+    {
+      "id": "pickaxe1",
+      "yandex": {
+        "id": "pickaxe1"
+      },
+      "msn": {
+        "id": "pickaxe1"
+      },
+      "playgama": {
+        "amount": 10
+      }
+    },
+    {
+      "id": "scissors_2",
+      "yandex": {
+        "id": "scissors_2"
+      },
+      "msn": {
+        "id": "scissors_2"
+      },
+      "playgama": {
+        "amount": 10
+      }
+    },
+    {
+      "id": "key_2",
+      "yandex": {
+        "id": "key_2"
+      },
+      "msn": {
+        "id": "key_2"
+      },
+      "playgama": {
+        "amount": 10
+      }
+    },
+    {
+      "id": "key_3",
+      "yandex": {
+        "id": "key_3"
+      },
+      "msn": {
+        "id": "key_3"
+      },
+      "playgama": {
+        "amount": 10
+      }
+    },
+    {
+      "id": "key_4",
+      "yandex": {
+        "id": "key_4"
+      },
+      "msn": {
+        "id": "key_4"
+      },
+      "playgama": {
+        "amount": 10
+      }
+    },
+    {
+      "id": "coins_1",
+      "yandex": {
+        "id": "coins_1"
+      },
+      "msn": {
+        "id": "coins_1"
+      },
+      "playgama": {
+        "amount": 10
+      }
+    },
+    {
+      "id": "coins_2",
+      "yandex": {
+        "id": "coins_2"
+      },
+      "msn": {
+        "id": "coins_2"
+      },
+      "playgama": {
+        "amount": 10
+      }
+    },
+    {
+      "id": "diamonds_1",
+      "yandex": {
+        "id": "diamonds_1"
+      },
+      "msn": {
+        "id": "diamonds_1"
+      },
+      "playgama": {
+        "amount": 10
+      }
+    },
+    {
+      "id": "diamonds_2",
+      "yandex": {
+        "id": "diamonds_2"
+      },
+      "msn": {
+        "id": "diamonds_2"
+      },
+      "playgama": {
+        "amount": 10
+      }
+    },
+    {
+      "id": "offer_2",
+      "yandex": {
+        "id": "offer_2"
+      },
+      "msn": {
+        "id": "offer_2"
+      },
+      "playgama": {
+        "amount": 10
+      }
+    },
+    {
+      "id": "offer_3",
+      "yandex": {
+        "id": "offer_3"
+      },
+      "msn": {
+        "id": "offer_3"
+      },
+      "playgama": {
+        "amount": 10
+      }
+    }
+  ],
+  "leaderboards": [],
+  "sendAnalyticsEvents": false,
+  "showFullLoadingLogo": false,
+  "disableLoadingLogo": false
 }
